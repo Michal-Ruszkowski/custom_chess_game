@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michał Ruszkowski">
+    <title>Custom chess</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+        integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="rules">
+            <h2 class="rules__title">Rules</h2>
+            <p class="rules__text">These are <strong>not typical</strong> chess. The rules of this game are <strong>different</strong> from normal chess. This game was created as a recruitment task based on the rules provided by the recruiter.</p>
+            <p class="rules__text">The starting position of the pieces is different than normal, and not all the pieces are present.</p>
+            <p class="rules__text">The queen can only move one square at a time.</p>
+            <p class="rules__text">The king can only move in the directions up/down/right/left.</p>
+            <p class="rules__text">The game ends not with a checkmate, but when we capture the king.</p>
+        </div>
+        <div id="myBoard" class="myBoard hidden"></div>
+        <div class="right">
+            <p class="result"></p>
+            <p>Choose a side (whites start):</p>
+            <div class="flex">
+                <div class="white" onclick="loadBoard('white')"></div>
+                <div class="black" onclick="loadBoard('black')"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
